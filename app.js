@@ -13,5 +13,9 @@ function generate() {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
+  document.querySelector('#generated-password').addEventListener('click', e => {
+    navigator.clipboard.writeText(e.target.innerText)
+  })
+
   generate()
 })
