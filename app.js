@@ -1,7 +1,7 @@
 const chars =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&*()-_=+?/'
 function generate() {
-  const content = document.querySelector('.password')
+  const content = document.querySelector('#generated-password')
   let str = ''
   let length = 12
   do {
@@ -12,4 +12,6 @@ function generate() {
   content.innerText = str
 }
 
-generate()
+document.addEventListener('DOMContentLoaded', event => {
+  generate()
+})
